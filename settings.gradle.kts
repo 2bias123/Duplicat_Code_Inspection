@@ -1,0 +1,1 @@
+rootProject.name = "Duplicat_Code_Inspection"
