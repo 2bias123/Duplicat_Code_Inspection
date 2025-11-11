@@ -28,3 +28,13 @@ Unit tests in `src/test/kotlin/ast/AstNodeExtensionsTest.kt` cover:
 ```bash
 ./gradlew test
 ```
+
+## Limitations
+
+This method checks **exact structural equivalence** only.  
+Duplicate detection isn’t useful when:
+- Code differs only by variable names or literals.
+- The duplicate is intentional (e.g., small helpers).
+- It appears in different contexts or generated code.
+
+Handling those cases would need semantic or higher-level analysis, outside this prototype’s scope.
